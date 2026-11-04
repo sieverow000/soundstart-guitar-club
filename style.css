@@ -1,0 +1,444 @@
+
+/* ==========================================
+   SOUNDSTART GUITAR CLUB
+   Main Website Stylesheet
+   Created for the Final Website Project
+========================================== */
+
+/* 1. GENERAL PAGE STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f5ef;
+    color: #202b3a;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #b96f2c;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #e99a4b;
+    outline-offset: 4px;
+}
+
+/* 2. HEADER AND NAVIGATION */
+
+header {
+    background-color: #172538;
+    color: white;
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e99a4b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #e99a4b;
+}
+
+/* 3. HERO SECTION */
+
+.hero {
+    min-height: 550px;
+
+    background:
+        linear-gradient(
+            rgba(16, 29, 46, 0.82),
+            rgba(16, 29, 46, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    color: #e99a4b;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* 4. BUTTONS */
+
+.button {
+    display: inline-block;
+    background-color: #e99a4b;
+    color: #172538;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f7bd7e;
+    transform: translateY(-2px);
+}
+
+/* 5. INTRODUCTION SECTION */
+
+.intro {
+    max-width: 850px;
+    margin: auto;
+    padding: 80px 25px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 34px;
+    color: #172538;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 17px;
+}
+
+/* 6. FEATURE CARDS - CSS GRID */
+
+.features {
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px 25px 85px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    border-bottom: 4px solid #e99a4b;
+
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #172538;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    margin-bottom: 20px;
+}
+
+.feature-card a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.feature-card a:hover {
+    text-decoration: underline;
+}
+
+/* 7. CALL TO ACTION SECTION */
+
+.cta {
+    background-color: #263b54;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.cta h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+/* 8. ADDITIONAL PAGE STYLES */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.page-banner {
+    background-color: #263b54;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.page-banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #172538;
+}
+
+/* 9. FLEXBOX LAYOUT */
+
+.flex-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.flex-content > div {
+    flex: 1 1 300px;
+}
+
+.flex-content img {
+    border-radius: 10px;
+}
+
+/* 10. GENERAL CARD GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #b96f2c;
+    margin-bottom: 12px;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 11. LISTS */
+
+.content-list {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.content-list li {
+    margin-bottom: 10px;
+}
+
+/* 12. TABLES */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #172538;
+    color: white;
+}
+
+/* 13. CONTACT FORM */
+
+form {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #e99a4b;
+}
+
+/* 14. FOOTER */
+
+footer {
+    background-color: #172538;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #f2ae68;
+}
+
+/* 15. MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .intro h2,
+    .cta h2 {
+        font-size: 27px;
+    }
+
+    .page-banner h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
